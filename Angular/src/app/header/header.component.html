@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/home">LIBRARY MANAGEMENT SYSTEM</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active" *ngIf = 'isAdmin() || isStudent'>
+              <a class="nav-link" routerLink="/home"><i class="fa fa-fw fa-home"></i>Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" *ngIf = 'isAdmin() || isStudent'>
+            <a class="nav-link" routerLink="/about"><i class="fa fa-info-circle" aria-hidden="true"></i>About</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Role
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/add">Librarian</a>
+              <a class="dropdown-item" routerLink="/student">Student</a>
+            </div>
+          </li> -->
+          <li class="nav-item" *ngIf = 'isAdmin()'>
+              <a class="nav-link" routerLink="/add"><i class="fa fa-user" aria-hidden="true"></i>
+
+
+                Librarian</a>
+          </li>
+          <li class="nav-item" *ngIf ='isStudent()'>
+            <a class="nav-link" routerLink="/student"><i class="fa fa-users" aria-hidden="true"></i>
+              Student</a>
+        </li>
+         <!-- <li class="nav-item" *ngIf = 'isAdmin() || isStudent'>
+              <a class="nav-link" routerLink="/search"><i class="fa fa-search"></i>Search</a>
+          </li> --> 
+          
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf = '!(isAdmin() || isStudent())'>
+            <a routerLink="/addUser" class="nav-link"><i class="fa fa-user-plus" aria-hidden="true"></i>
+
+              Sign Up</a>
+        </li>
+
+        <li class="nav-item" *ngIf = '!(isAdmin() || isStudent())'>
+            <a routerLink="/login" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i>
+              Signin</a>
+        </li>
+        <li class="nav-item" *ngIf = 'isAdmin() || isStudent()'>
+          <a class="nav-link" style ="cursor: pointer;" (click)='logout()' ><i class="fa fa-sign-out" aria-hidden="true"></i>
+
+            Signout</a>
+      </li>
+      </ul>
+  </div>
+</nav>

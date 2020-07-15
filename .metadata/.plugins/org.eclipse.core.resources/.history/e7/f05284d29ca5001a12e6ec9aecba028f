@@ -1,0 +1,5 @@
+package com.capgemini.librarymanagementsystemspringrest.testrunner;
+
+public class TestRunner {
+
+}

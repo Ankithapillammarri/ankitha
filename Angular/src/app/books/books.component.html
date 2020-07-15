@@ -1,0 +1,42 @@
+<div class="alert alert-success" *ngIf='message'>{{ message }}</div>
+<div class="container mt-4">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search"  [(ngModel)] = "searchText" aria-label="Username" aria-describedby="basic-addon1">
+      
+    </div>
+      <label name='Search By'>Search By</label>
+    <select class="selectpicker widith ='50%' float-right" id="inputGroupSelect01" [(ngModel)] = "fieldName">
+        <option value="bookName" selected>BookName</option>
+        <option value="author">BookAuthor</option>
+        <option value="bid">BookId</option>
+      </select>
+      <br><br>
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Publisher</th>
+                <!-- <th>Delete</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let book of books|searchBook:searchText:fieldName'>
+                <td>{{book.bid}}</td>
+                <td>{{book.bookName}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.category}}</td>
+                <td>{{book.publisher}}</td>
+                
+               <!--  <td><span style="font-size: 20px;color: red ;" (click) = 'deleteData(book)'><i class="fa fa-trash" aria-hidden="true"></i></span></td> -->
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+<!-- <td><button class="btn btn-outline-primary" (click) = 'deleteData(book)'><i class="fa fa-trash" aria-hidden="true"></i>
+
+                    Delete</button></td> -->

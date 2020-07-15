@@ -1,0 +1,32 @@
+package com.capgemini.lmsspringrest.bean;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+import lombok.Data;
+@Data
+@Entity
+@Table(name = "request_details")
+@SuppressWarnings("serial")
+public class RequestDetailsInfo implements Serializable{
+	@Id
+	@Column
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq1")
+	private int id;
+	@Column
+	private int uId;
+	@Column
+	private int bId;
+	@Column
+	private String email;
+	@Column
+	private String bookName;
+
+}

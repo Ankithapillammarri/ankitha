@@ -1,0 +1,30 @@
+package com.capgemini.librarymanagementsystemjpa.dao;
+
+import java.util.List;
+
+import com.capgemini.librarymanagementsystemjpa.dto.BookInfo;
+import com.capgemini.librarymanagementsystemjpa.dto.BookIssueInfo;
+import com.capgemini.librarymanagementsystemjpa.dto.BorrowedBooksInfo;
+import com.capgemini.librarymanagementsystemjpa.dto.RequestDetailsInfo;
+import com.capgemini.librarymanagementsystemjpa.dto.UsersInfo;
+
+public interface UsersDAO {
+	boolean register(UsersInfo user);
+	UsersInfo login(String email,String password);
+	boolean addBook(BookInfo book);
+	boolean removeBook(int bId);
+	boolean updateBook(BookInfo book);
+	boolean issueBook(int bId,int uId);
+	boolean request(int uId, int bId);
+	List<BorrowedBooksInfo> borrowedBook(int uId);
+	List<BookInfo> searchBookById(int bId);
+	List<BookInfo> searchBookByTitle(String bookName);
+	List<BookInfo> searchBookByAuthor(String author);
+	List<BookInfo> getBooksInfo();
+	boolean returnBook(int bId,int uId,String status);
+	List<Integer> bookHistoryDetails(int uId);
+	List<RequestDetailsInfo> showRequests();
+	List<BookIssueInfo> showIssuedBooks();
+	List<UsersInfo> showUsers();
+	boolean updatePassword(String email,String password,String newPassword,String role);
+}

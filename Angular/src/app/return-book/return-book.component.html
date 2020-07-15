@@ -1,0 +1,59 @@
+<!-- <div class="container mt-4">
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>User Id</th>
+                <th>Book Id</th>
+                <th>Issue Date</th>
+                <th>Return Date</th>
+                <th>Return</th>
+               
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let return of returns'>
+                <td>{{return.id}}</td>
+                <td>{{return.uid}}</td>
+                <td>{{return.bid}}</td>
+                <td>{{return.issueDate}}</td>
+                <td>{{return.returnDate}}</td>
+                <td><button class="btn btn-outline-primary" (click) = 'returnData(return)'>
+                    Return</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+ -->
+ 
+ <div class="container mt-4">
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>User Id</th>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Return</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let borrow of borrows'>
+                <td>{{borrow.id}}</td>
+                <td>{{borrow.uid}}</td>
+                <td>{{borrow.bid}}</td>
+                <td>{{borrow.bookName}}</td>
+               <!--  <td><button class="btn btn-outline-primary" (click) = 'requestData(borrow)'>
+                    Request</button></td> -->
+                    <td><button class="btn btn-outline-primary" (click) = 'returnData(borrow)'>
+                        Return</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+

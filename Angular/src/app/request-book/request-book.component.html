@@ -1,0 +1,84 @@
+<!-- <div class="alert alert-danger" *ngIf='error'>{{error}}</div> 
+<form #loginForm='ngForm' (ngSubmit)='loginUser(loginForm)'>
+    <div class="col-md-6 offset-4 card">
+        <div class="card-body">
+            <h2 class="h2 text-center">Book Request</h2>
+             <div class="form-group">
+                <label for="uid">User Id</label> <br>
+                <input type="uid" id="uid" name="uid" required  id="uid" #email='ngModel' ngModel class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Book Id</label>
+                <input type="bid" id="bid" name="bid"  required minlength="6" id="bid" #password='ngModel' ngModel class="form-control">
+            </div>
+            <div class="form-group club">
+                <button class="btn btn-outline-dark float-right">Request</button>
+                
+            </div>
+            
+        </div>
+    </div>
+</form> -->
+<div class="container mt-4">
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Publisher</th>
+                <th>Request</th>
+                <!-- <th>Update</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let book of books'>
+                <td>{{book.bid}}</td>
+                <td>{{book.bookName}}</td>
+                <td>{{book.author}}</td>
+                <td>{{book.category}}</td>
+                <td>{{book.publisher}}</td>
+                <!-- <td><button class="btn btn-outline-primary" (click) = 'requestData(book.bid)'>
+
+                    Request</button></td> -->
+                    <td><span style="font-size: 20px;color:blue ;" (click) = 'requestData(book.bid)'>
+                        <i class="fa fa-book" aria-hidden="true"></i></span></td>
+               <!--  <td><span style="font-size: 20px;color: red ;" (click) = 'deleteData(book)'><i class="fa fa-trash" aria-hidden="true"></i></span></td> -->
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+ <!-- <div class="alert alert-success" *ngIf='message'>
+    {{ message }}>
+</div>
+<div class="col-md-4 offset-4 mt-4">
+    <h4 class="text-center">Request Book</h4>
+    <table class="table table-hover table-bordered">
+        <thead class="table-hover">
+            <tr>
+                <th>Book ID</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Publisher</th>
+                <th>Request</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let bookDetails of books'>
+                <td>{{bookDetails.bid}}</td>
+                <td>{{bookDetails.bookName}}</td>
+                <td>{{bookDetails.author}}</td>
+                <td>{{bookDetails.category}}</td>
+                <td>{{bookDetails.publisher}}</td>
+                <td><button type="submit" class="btn btn-outline-primary " (click)='requestData(bookDetails)'>RequestBook</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div> -->

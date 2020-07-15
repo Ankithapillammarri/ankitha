@@ -1,0 +1,43 @@
+<div class="alert alert-success" *ngIf='message'>{{ message }}</div>
+<div class="col-md-4 offset-4 mt-4">
+    <h4 class="text-center">Add Book</h4>
+    <form #addBookForm='ngForm' (ngSubmit)='postBook(addBookForm)'>
+        <div class="form-group">
+            <label for="bookName">Book Name</label>
+            <input type="text" name="bookName" id="bookName" #bookName='ngModel' ngModel class="form-control" pattern="[a-zA-Z0-9\s]*" required>
+        </div>
+        <div *ngIf="bookName.touched && bookName.invalid">
+            <p class="alert alert-danger" *ngIf="bookName.errors.required">BookName is required</p>
+            <p class="alert alert-danger" *ngIf="bookName.errors.pattern">Accepts both digits and alphabets</p>
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" #author='ngModel' ngModel class="form-control" pattern="[a-zA-Z0-9\s]*" required>
+        </div>
+        <div *ngIf="bookName.touched && bookName.invalid">
+            <p class="alert alert-danger" *ngIf="bookName.errors.required">BookName is required</p>
+            <p class="alert alert-danger" *ngIf="bookName.errors.pattern">Accepts both digits and alphabets</p>
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" name="category" id="category" #category='ngModel' ngModel class="form-control" pattern="[a-zA-Z0-9\s]*" required>
+        </div>
+        <div *ngIf="bookName.touched && bookName.invalid">
+            <p class="alert alert-danger" *ngIf="bookName.errors.required">BookName is required</p>
+            <p class="alert alert-danger" *ngIf="bookName.errors.pattern">Accepts both digits and alphabets</p>
+        </div>
+        <div class="form-group">
+            <label for="publisher">Publisher</label>
+            <input type="text" name="publisher" id="publisher" #publisher='ngModel' ngModel
+                class="form-control" pattern="[a-zA-Z0-9\s]*" required>
+        </div>
+        <div *ngIf="bookName.touched && bookName.invalid">
+            <p class="alert alert-danger" *ngIf="bookName.errors.required">BookName is required</p>
+            <p class="alert alert-danger" *ngIf="bookName.errors.pattern">Accepts both digits and alphabets</p>
+        </div>
+        <button type="submit" class="btn btn-outline-primary float-left">
+            Add Book
+        </button>
+    </form>
+    
+</div>

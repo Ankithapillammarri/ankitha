@@ -1,0 +1,23 @@
+package com.capgemini.librarymanagementsystemcucumber.stepdefinitions;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class AdminSteps {
+	@Given("^Admin is on Login page$")
+	public void admin_is_on_Login_page() throws Throwable {
+	   
+	}
+
+	@When("^Admin enters \"([^\"]*)\",\"([^\"]*)\"$")
+	public void admin_enters(String arg1, String arg2) throws Throwable {
+	    
+	}
+
+	@Then("^Admin should be logged in$")
+	public void admin_should_be_logged_in() throws Throwable {
+	   
+	}
+
+}

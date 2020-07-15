@@ -1,0 +1,27 @@
+<div class="alert alert-success" *ngIf='message'>{{ message }}</div>
+<div class="col-md-4 offset-4 mt-4">
+    <h4 class="text-center">Book Issue</h4>
+   <!--  <form #issueForm='ngForm' (ngSubmit)='issueData(issueForm)'> -->
+        <div class="form-group">
+            <label for="id">Request Id</label>
+            <input type="text" name="id" id="id" #id='ngModel' ngModel class="form-control">
+        </div>
+        <!-- <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" #author='ngModel' ngModel class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" name="category" id="category" #category='ngModel' ngModel class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="publisher">Publisher</label>
+            <input type="text" name="publisher" id="publisher" #publisher='ngModel' ngModel
+                class="form-control">
+        </div> -->
+        <button type="submit" class="btn btn-outline-primary float-left">
+            Issue
+        </button>
+   <!--  </form> -->
+</div>
+

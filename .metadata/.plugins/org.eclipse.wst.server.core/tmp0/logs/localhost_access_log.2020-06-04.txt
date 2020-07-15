@@ -1,0 +1,9 @@
+127.0.0.1 - - [04/Jun/2020:21:52:23 +0530] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:21:55:38 +0530] "OPTIONS /librarymanagementsystemspringrest/login HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:21:55:38 +0530] "OPTIONS /librarymanagementsystemspringrest/login HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:21:55:38 +0530] "POST /librarymanagementsystemspringrest/login HTTP/1.1" 200 224
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:21:55:38 +0530] "POST /librarymanagementsystemspringrest/login HTTP/1.1" 200 224
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:21:55:41 +0530] "GET /librarymanagementsystemspringrest/getBooksInfo HTTP/1.1" 200 228
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:21:55:46 +0530] "GET /librarymanagementsystemspringrest/getBorrowedBooks HTTP/1.1" 200 201
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:21:55:49 +0530] "GET /librarymanagementsystemspringrest/getBorrowedBooks HTTP/1.1" 200 201
+0:0:0:0:0:0:0:1 - - [04/Jun/2020:22:00:16 +0530] "POST /librarymanagementsystemspringrest/login HTTP/1.1" 200 226

@@ -1,0 +1,17 @@
+package com.capgemini.lmsspringrest.bean;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "borrowed_books")
+@SuppressWarnings("serial")
+public class BorrowedBooksInfo implements Serializable{
+
+}

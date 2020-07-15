@@ -1,0 +1,16 @@
+Feature: Admin can add,delete,update,issue books and able to view books
+
+Background:
+
+Given Admin is on Login page
+When Admin enters username and password
+|shailu@gmail.com|Shailaja@1|
+Then Admin should be logged in
+
+Scenario: Admin should be able to add books
+Given Admin is on adding book page
+When Admin enters book details
+
+| bookName | author | publisher | category | status |
+| History | Lorens| Md publications | social | Added Successfully |
+| Biology | Ratnakar| Sm publications | science | Added Successfully | 

@@ -1,0 +1,13 @@
+Feature: After Student Login operations like Request a Book and Return A Book
+
+Scenario Outline: Student Login with valid Credentials
+
+Given Student is Login page
+When Student gives <email>, <password>
+Then Student should be logged in
+
+Examples:
+
+|email|password|
+|"pranu@gmail.com"|"Pranath@1"|
+

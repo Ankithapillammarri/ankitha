@@ -1,0 +1,5 @@
+package com.capgemini.lmsspringrest.bean;
+
+public class BookIssuseInfo {
+
+}

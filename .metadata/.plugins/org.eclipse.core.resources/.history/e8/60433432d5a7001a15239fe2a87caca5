@@ -1,0 +1,50 @@
+package com.capgemini.librarymanagementsystemcucumber.stepdefinitions;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.capgemini.librarymanagementsystemcucumber.testrunner.TestRunner;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class AdminSteps extends TestRunner {
+	@Before
+	public void openBrowser() throws Exception {
+		driver = new ChromeDriver();
+		driver.get("http://localhost:4200/login");
+
+		wait = new WebDriverWait(driver, 10);
+		action = new Actions(driver);
+		// driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+	
+	@Given("^Admin is on Login page$")
+	public void admin_is_on_Login_page() throws Throwable {
+		// input[ @id='email']
+				Thread.sleep(5000);
+				String actual = driver.getTitle();
+				String excepted = "LmsAngular";
+				System.out.println(actual);
+				assertTrue("The webpage is not a login page", actual.equals(excepted));
+	}
+
+	@When("^Admin enters \"([^\"]*)\",\"([^\"]*)\"$")
+	public void admin_enters(String arg1, String arg2) throws Throwable {
+	    
+	}
+
+	@Then("^Admin should be logged in$")
+	public void admin_should_be_logged_in() throws Throwable {
+	   
+	}
+
+}
